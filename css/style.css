@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    /* overflow: hidden; */
+}
+
+:root {
+    --main-green: #005E64;
+    --main-yellow: #F9AD59;
+    --main-backgound: #FFF6ED;
+}
+
+.bgg {
+    background-color: var(--main-backgound);
+    position: relative;
+}
+
+.navBar {
+    position: relative;
+    width: 95%;
+}
+
+
+/* *****************nav**************** */
+
+#nav-icon1,
+#nav-icon2,
+#nav-icon3,
+#nav-icon4 {
+    width: 38px;
+    height: 35px;
+    margin-top: 5px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#nav-icon1 span,
+#nav-icon3 span,
+#nav-icon4 span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 70%;
+    background: var(--main-green);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+
+/* Icon 3 */
+
+#nav-icon3 span:nth-child(1) {
+    top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+    top: 10px;
+}
+
+#nav-icon3 span:nth-child(4) {
+    top: 20px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.button {
+    outline: none !important;
+}
+
+
+/* *************nav end ***************** */
+
+.cloud-bg {
+    height: 100vh;
+}
+
+.bg {
+    position: absolute;
+    width: 40%;
+    right: 0px;
+}
+
+.bg2 {
+    position: absolute;
+    width: 30%;
+    left: 0px;
+    bottom: 0px;
+}
+
+.logo {
+    width: 15%;
+    height: auto;
+}
+
+.active {
+    color: var(--main-yellow) !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navtitle {
+    color: var(--main-green) !important;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.navtitle:hover {
+    color: #F9AD59 !important;
+}
+
+.active:hover {
+    color: var(--main-green) !important;
+}
+
+.bran {
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: var(--main-green);
+    font-weight: bold;
+    letter-spacing: 20px;
+    padding-top: 70px;
+    text-shadow: 5px 3px 9px #acacac;
+}
+
+.right {
+    height: 79vh;
+}
+
+.left {
+    height: 79vh;
+    flex-direction: column;
+    padding-left: 110px;
+    padding-top: 100px;
+}
+
+.right-photo {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+.form {
+    width: 65% !important;
+}
+
+.form-one {
+    margin-bottom: 55px;
+}
+
+.form-two {
+    margin-bottom: 55px;
+}
+
+.select {
+    background-color: var(--main-backgound);
+    font-size: 23px;
+}
+
+.select:hover {
+    background-color: var(--main-backgound);
+}
+
+.select:focus {
+    box-shadow: inherit !important;
+    background-color: inherit !important;
+    border-color: inherit !important;
+}
+
+.gps-icon {
+    width: 35px;
+    height: 35px;
+}
+
+@media (max-width:480px) {
+    .navBar {
+        position: absolute;
+        z-index: 2001;
+        padding: 10px 0px 10px 0px !important;
+    }
+    .meanu {
+        backdrop-filter: blur(10px);
+        border-bottom: 5px solid var(--main-yellow) !important;
+    }
+    .logo {
+        width: 35%;
+        height: auto;
+        margin-left: 0px !important;
+    }
+    .row {
+        flex-direction: column-reverse;
+    }
+    .active {
+        font-size: 15px !important;
+        padding: 10px 0;
+    }
+    .navtitle {
+        font-size: 15px !important;
+        padding: 10px 0;
+        margin-left: unset;
+    }
+    .bran {
+        font-size: 30px !important;
+        margin: 0 0 30px 10px !important;
+        letter-spacing: 20px;
+        padding-top: 10px !important;
+        text-shadow: 5px 3px 9px #acacac;
+    }
+    .left {
+        height: 20vh;
+        padding-left: 10px !important;
+        padding-top: unset !important;
+    }
+    .right {
+        height: 52vh !important;
+        overflow: hidden;
+    }
+    .gps-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .form {
+        width: 90% !important;
+        margin: auto;
+    }
+    .select {
+        font-size: 15px !important;
+    }
+    .form-one {
+        margin-bottom: 25px !important;
+    }
+    .form-two {
+        margin-bottom: 25px !important;
+    }
+    .buttom {
+        width: 100%;
+    }
+    .right-photo {
+        position: absolute;
+        width: 90% !important;
+        bottom: 0px;
+    }
+}
+
+@media (max-width:1024px) {
+    .navBar {
+        position: absolute;
+        z-index: 2001;
+        padding: 10px 0px 10px 0px;
+    }
+    .meanu {
+        backdrop-filter: blur(10px);
+        border-bottom: unset;
+    }
+    .logo {
+        width: 35%;
+        height: auto;
+        margin-left: 20px;
+    }
+    .row {
+        flex-direction: column-reverse;
+    }
+    .active {
+        font-size: 20px;
+    }
+    .navtitle {
+        font-size: 20px;
+        margin-left: unset;
+    }
+    .bran {
+        font-size: 50px;
+        margin: 0 0 30px 50px;
+        letter-spacing: 20px;
+        padding-top: 10px;
+        text-shadow: 5px 3px 9px #acacac;
+    }
+    .left {
+        height: 20vh;
+        padding-left: 10px;
+        padding-top: unset;
+    }
+    .right {
+        height: 60vh;
+    }
+    .gps-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .form {
+        width: 90% !important;
+        margin: auto;
+    }
+    .select {
+        font-size: 25px;
+    }
+    .form-one {
+        margin-bottom: 60px;
+    }
+    .form-two {
+        margin-bottom: 51px;
+    }
+    .buttom {
+        width: 100%;
+    }
+    .right-photo {
+        position: absolute;
+        width: 80%;
+        bottom: 0px;
+    }
+}
+
+
+/* ********************************** */
+
+.ui-select {
+    width: 100%
+}
+
+
+/* This is to remove the arrow of select element in IE */
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+@-moz-document url-prefix() {
+    .ui-select {
+        border: 1px solid #CCC;
+        border-radius: 4px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+    }
+    .ui-select select {
+        width: 110%;
+        background-position: right 30px center !important;
+        border: none !important;
+    }
+}
+
+.duration0 {
+    animation-delay: 0.1s;
+}
+
+.duration1 {
+    animation-delay: 0.2s;
+}
+
+.duration2 {
+    animation-delay: 0.4s;
+}
+
+.duration3 {
+    animation-delay: 0.4s;
+}
+
+.duration4 {
+    animation-delay: 0.5s;
+}
